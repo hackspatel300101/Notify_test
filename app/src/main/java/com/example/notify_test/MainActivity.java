@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 import com.android.volley.AuthFailureError;
 import com.android.volley.RequestQueue;
@@ -18,6 +19,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     Button btn;
+    EditText title,body;
     final private String FCM_API = "https://fcm.googleapis.com/fcm/send";
     final private String serverKey = "key=" + "AAAAV1CqY6k:APA91bFuBn-4l7ce7QI9uVdd70ZMPcCrKDsN_b620lGcir5YbMug_Fn-hEziLp1WRtuEBRbdZzVT4AQvtUYesNFNUPLdoaJxg7R3JcrA9W7oIAQ4D-Kl4mjAT19iXUFZJpbQnWXO9i5R";
     final private String contentType = "application/json";
@@ -31,14 +33,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn=findViewById(R.id.btn);
+        title=findViewById(R.id.titel_ed);
+        body=findViewById(R.id.body_ed);
         requestQueue= Volley.newRequestQueue(getApplicationContext());
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TOPIC = "/topics/Group"; //topic must match with what the receiver subscribed to
-                NOTIFICATION_TITLE = "hello";
-                NOTIFICATION_MESSAGE = "my msg";
+                NOTIFICATION_TITLE = title.getText().toString();
+                NOTIFICATION_MESSAGE = body.getText().toString();
 
                 JSONObject notification = new JSONObject();
                 JSONObject notifcationBody = new JSONObject();
