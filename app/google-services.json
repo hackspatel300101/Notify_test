@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "91375731496",
+    "firebase_url": "https://natural-point-278507.firebaseio.com",
+    "project_id": "natural-point-278507",
+    "storage_bucket": "natural-point-278507.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91375731496:android:d687642bbada4e495bc61d",
+        "android_client_info": {
+          "package_name": "com.example.notify_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91375731496-7h0om2m4i8vs79f88ac9p30pb125ip15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiM-QHSviYx6u1jxecke0FoTSF8clsMEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91375731496-7h0om2m4i8vs79f88ac9p30pb125ip15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
